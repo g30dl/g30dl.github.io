@@ -13,25 +13,11 @@ Estudiante de Ingeniería en Computación con conocimientos básicos en desarrol
 ---
 
 ## Tecnologías y Herramientas
-
-### Lenguajes de programación
-- Python
-- Java
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
-
-### Bases de datos
-- MySQL
-
-### Herramientas
-- Git
-- GitHub
-
-### Librerías y Frameworks
-- Flask
+**Lenguajes:** Python, Java  
+**Frontend:** HTML, CSS, JavaScript  
+**Bases de datos:** MySQL  
+**Herramientas:** Git, GitHub  
+**Frameworks:** Flask
 
 ---
 
@@ -41,38 +27,24 @@ Estudiante de Ingeniería en Computación con conocimientos básicos en desarrol
 Este proyecto implementa una solución al **Problema del Agente Viajero**, un desafío clásico de optimización combinatoria aplicado al contexto de una gira musical.  
 El objetivo es calcular la ruta más corta que permita a una banda visitar varias ciudades y regresar al punto de inicio, minimizando la distancia total recorrida.  
 
-**Tecnologías utilizadas:**  
-- Python  
-- Algoritmos de optimización  
-- Flask
+**Tecnologías utilizadas:** Python, Algoritmos de optimización, Flask
 
 ---
 
 ### 2. [Automotriz Cordova](https://github.com/leno-mpm/Automotriz-Cordova)
 Sistema de gestión de inventario para una empresa automotriz, desarrollado con un enfoque en bases de datos relacionales y operaciones completas de **CRUD** (Crear, Leer, Actualizar, Eliminar).  
-El sistema permite manejar información garantizando integridad y eficiencia en la gestión del inventario.
 
-**Tecnologías utilizadas:**  
-- SQL / MySQL
+**Tecnologías utilizadas:** SQL / MySQL
 
 ---
 
 ### 3. [Uno – Aplicación móvil](https://github.com/Darwin4050E/Proyecto1P)
 Aplicación para móvil que implementa las reglas del juego **Uno** de una persona contra la máquina. Incluye cartas especiales como reversa, +2, +4, bloqueo, cambio de color y cartas personalizadas.  
 
-**Tecnologías utilizadas:**  
-- Java  
-- Android Studio  
-- Diagramas UML
+**Tecnologías utilizadas:** Java, Android Studio, Diagramas UML
 
 ---
 
 ## Contáctame
+📧 [geodloo@espol.ec](mailto:geodloo@espol.ec) | 💼 [LinkedIn](https://www.linkedin.com/in/geovanny-diaz-loor-7200442ba/) | 🐙 [GitHub](https://github.com/g30dl)
 
-Si quieres colaborar en un proyecto o conversar, puedes encontrarme en:  
-
-📧 Correo institucional: [geodloo@espol.ec](mailto:geodloo@espol.ec)  
-💼 LinkedIn: [Geovanny Diaz](https://www.linkedin.com/in/geovanny-diaz-loor-7200442ba/)  
-🐙 GitHub: [g30dl](https://github.com/g30dl)
-
-  
