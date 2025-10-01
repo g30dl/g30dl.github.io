@@ -1,12 +1,27 @@
-# g30dl.github.io
-Geovanny Diaz
-Estudiante de Ingeniería en Computación en la ESPOL
-Interesado en el desarrollo web | Me atrae la Cyberseguridad | IA y Ciencia de datoos
+# Geovanny Diaz
 
-Tecnologías y herramientas que utilizo
+🎓 Estudiante de Ingeniería en Computación en la ESPOL  
+💻 Interesado en el desarrollo web | 🔒 Apasionado por la ciberseguridad | 🤖 Inteligencia Artificial y Ciencia de Datos
 
-Lenguajes: Python, Java
-Frontend: HTML, CSS, JavaScript.
-Bases de datos: MySQL.
-Herramientas: Git, GitHub.
-Librerías y frameworks: Flask
+---
+
+## Tecnologías y Herramientas
+
+### Lenguajes de programación
+- Python
+- Java
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Bases de datos
+- MySQL
+
+### Herramientas
+- Git
+- GitHub
+
+### Librerías y Frameworks
+- Flask
