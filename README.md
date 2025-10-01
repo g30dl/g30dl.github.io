@@ -65,3 +65,14 @@ Aplicación para móvil que implementa las reglas del juego **Uno** de una perso
 - Android Studio  
 - Diagramas UML
 
+---
+
+## Contáctame
+
+Si quieres colaborar en un proyecto o conversar, puedes encontrarme en:  
+
+📧 Correo institucional: [geodloo@espol.ec](mailto:geodloo@espol.ec)  
+💼 LinkedIn: [Geovanny Diaz](https://www.linkedin.com/in/geovanny-diaz-loor-7200442ba/)  
+🐙 GitHub: [g30dl](https://github.com/g30dl)
+
+  
