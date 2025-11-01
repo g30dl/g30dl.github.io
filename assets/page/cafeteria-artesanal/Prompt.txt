@@ -1,0 +1,228 @@
+Prompt: "Crea una página web completa desde cero sobre una cafetería artesanal, usando solo HTML, CSS (en archivo externo) y JavaScript (en archivo externo). Explica la estructura del proyecto y qué hace cada archivo. Agrega una interacción simple con JavaScript (por ejemplo, un botón que cambie el color de fondo del sitio). Selecciona una paleta de colores y fuente que combinen con el tema de una cafetería. Muestra el código de los archivos index.html, style.css y script.js, y explica cómo abrir el proyecto en un navegador"
+
+🎨 Paleta de colores y tipografía
+
+Colores inspirados en café:
+
+Fondo: #f5f0e6 (beige claro)
+
+Marrón principal: #6f4e37
+
+Acento: #d2b48c
+
+Texto oscuro: #2c2c2c
+
+Fuente: "Poppins", sans-serif (limpia y moderna, combina bien con un tema artesanal)
+
+Perfecto ✅
+Vamos a dejar una estructura limpia y profesional, enfocada únicamente en los archivos HTML, CSS y JavaScript, sin imágenes, audio ni subpáginas.
+
+Ideal para una primera versión funcional del sitio web de la cafetería artesanal.
+
+🧱 Estructura del proyecto
+cafeteria-artesanal/
+│
+├── index.html
+│
+└── assets/
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── script.js
+
+🏠 index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Aroma - Cafetería Artesanal</title>
+
+  <!-- Fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Café Aroma</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h2>El sabor del café artesanal</h2>
+    <p>Disfruta del aroma, el sabor y la experiencia de un café hecho con pasión.</p>
+    <button id="cambiarColorBtn">Cambiar color de fondo</button>
+  </section>
+
+  <section id="menu">
+    <h2>Nuestro Menú</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Espresso</h3>
+        <p>Fuerte y aromático, perfecto para empezar el día.</p>
+      </div>
+      <div class="item">
+        <h3>Capuchino</h3>
+        <p>Equilibrio ideal entre café, leche y espuma.</p>
+      </div>
+      <div class="item">
+        <h3>Latte</h3>
+        <p>Suave y cremoso, ideal para relajarse.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>📍 Calle del Aroma 123, Ciudad Café</p>
+    <p>📞 +34 654 321 987</p>
+    <p>© 2025 Café Aroma</p>
+  </footer>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+🎨 assets/css/style.css
+/* === Estilos generales === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f0e6;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* === Encabezado === */
+header {
+  background-color: #6f4e37;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Hero === */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #d2b48c;
+}
+
+.hero button {
+  background-color: #6f4e37;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #5a3e2d;
+}
+
+/* === Menú === */
+#menu {
+  padding: 3rem 2rem;
+  background-color: #f5f0e6;
+  text-align: center;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 250px;
+}
+
+/* === Footer === */
+footer {
+  background-color: #6f4e37;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .menu-items {
+    flex-direction: column;
+  }
+}
+
+⚙️ assets/js/script.js
+// Seleccionar el botón y el body
+const boton = document.getElementById('cambiarColorBtn');
+const body = document.body;
+
+// Colores disponibles
+const colores = ['#f5f0e6', '#e8dcc2', '#d2b48c', '#cbb092'];
+let indice = 0;
+
+// Cambiar el color de fondo cuando se hace clic
+boton.addEventListener('click', () => {
+  indice = (indice + 1) % colores.length;
+  body.style.backgroundColor = colores[indice];
+});
+
+🚀 Cómo abrir el proyecto
+
+Crea una carpeta llamada cafeteria-artesanal.
+
+Dentro de ella, crea la carpeta assets con las subcarpetas css y js.
+
+Copia los tres archivos anteriores en su lugar correspondiente.
+
+Abre index.html haciendo doble clic o arrastrándolo a tu navegador.
+
+Verás la página lista, y al hacer clic en el botón “Cambiar color de fondo”, cambiará dinámicamente el color del fondo.
+
+¿Deseas que te agregue una animación suave cuando cambia el color de fondo (por ejemplo, una transición visual elegante)? Puedo mostrarte cómo hacerlo con una sola línea de CSS.

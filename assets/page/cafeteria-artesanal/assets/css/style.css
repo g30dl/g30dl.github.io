@@ -1,0 +1,105 @@
+/* === Estilos generales === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f0e6;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* === Encabezado === */
+header {
+  background-color: #6f4e37;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Hero === */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #d2b48c;
+}
+
+.hero button {
+  background-color: #6f4e37;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #5a3e2d;
+}
+
+/* === Menú === */
+#menu {
+  padding: 3rem 2rem;
+  background-color: #f5f0e6;
+  text-align: center;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 250px;
+}
+
+/* === Footer === */
+footer {
+  background-color: #6f4e37;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .menu-items {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- METADATOS -->
+	<meta charset="UTF-8"> <!-- Comentario -->
+	<meta name = "description" content="practicas-- html,css,js">
+	<meta name ="keywords" content ="HTML, CSS, JavaScript">
+	<meta name = "author" content = "Geovanny" >
+	<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+	<!-- meta http-equiv = "refresh" content= "10">  <!-- Refrescar página cada 10 segundos -->
+	<!-- METADATOS -->
+	
+	<!-- El error base de toda página web es la ruta -->
+	<title> Prácticas Diaz Loor </title>
+	<link rel="stylesheet" href= "estilos.css"  >
+	<link rel="icon" href="../img/Pokemon/Aerodactyl.ico" type="Mándala" size="16x16" >
+
+</head>
+<body>
+	<nav>	
+	  <a href = "../../index.html"> Inicio </a>  |
+	  <a href = "../page/practica_Text.html"> Práctica de Texto </a>  |
+	  <a href = https://sites.google.com/fiec.espol.edu.ec/islands/inicio?authuser=2> Práctica Builder (Google Site)</a> | 
+	  <a href = https://technologyec.my.canva.site/computer> Práctica Canva (Link a Canva)</a>  |
+	  <a href = "../page/cafeteria-artesanal/index.html"> Práctica de Inteligencia Artificial </a>  |
+	  <a href = "../page/practica_List.html"> Práctica de Listas</a>  |
+	  <a href = "../page/practica_Imagen.html"> Práctica de Imágenes</a>  |
+	  <a href = "../page/practica_Audio.html"> Práctica de Audio</a>  |
+	  <a href = "../page/practica_Video.html"> Práctica de Video</a>  |
+	  <a href = "../page/practica_Tablas.html"> Práctica de Tablas</a>  |
+	  <a href = "../page/practica_CSS.html"> Práctica de CSS</a>  |
+	  <a href = "../page/practica_CopyPaste.html"> Práctica de Copy Paste (Plantilla)</a>  |
+	  <a href = "../../CopyPaste/index.html"> Práctica de JavaScript</a>  |
+	  <a href = "../page/practica_controles.html"> Práctica de Controles</a>  |
+	  <a href = "../page/practica_Formulario.html"> Práctica de Formularios</a>  |
+	  <a href = "../page/practica_Formulario2.html"> Práctica de Formularios-2 </a>  |
+	  <a href = "../page/practica_Menu_Horizontal.html"> Práctica de etiquetas de Menú Horizontal </a>  |
+	  <a href = "../page/practica_Menu_Vertical.html"> Práctica de etiquetas de Menú Vertical </a>  |
+	  <a href = "../page/practica_crazy.html"> Práctica de Crazy </a>  
+	</nav>
+
+	<main>	
+		<h1> Práctica de JavaScript</h1>
+		<section>
+			<p>
+				JavaScript es un lenguaje de programación que se ejecuta tanto en el FrontEnd como en el Backend
+			</p>
+			<p>
+				JavaScript lo usamoos en varios Frameworks
+				<ol>
+						<li>React</li>
+						<li>Vue.js</li>
+						<li>Svelte/Sveltekit</li>
+						<li>Next.js</li>
+						<li>Nuxt.js</li>
+						<li>Astro</li>
+				</ol>			
+			</p>
+		</section>
+		
+		<section>
+			<p>
+				Para programar en JavaScript Ud. hace uso de sus conocimientos de programación (básico/intermedio)
+				<br>
+					Variablles: Locales, Globalles, Estaticas/Constantes <br>
+					Estructuras de Control (if, else) <br>
+					Bucles (For, While, ...) <br>
+					Funciones <br>
+			</p>
+			
+			<h3> Tipos de variables</h3>
+			<ul>
+				<li>let: Locales - Dentro de una funcion o bloque de programación<li>
+				<li>var: Globales - Las podemos utilizar en cuaquier parte del desarrollo<li>
+				<li>const: son varibles con valores fijos, que no puede cambiar de valores durante su ejecución<li>
+			</ul>
+		</section>
+		<section>
+			<h3>Tipos de datos</h3>
+			<ul>
+				<li>String: Caracteres alfanuméricos</li>
+				<li>Number: valores numéricos</li>
+				<li>Booleano: True/False</li>
+				<li>Arrays: Listas ["Elemento Lista #", "Elemento Lista #2", "Elemento Lista #N"]</li>
+				<li>Object - Diccionarios: NombreDiccionario{"Clave1":Valor1, "Clave2":Valor2, "ClaveN":ValorN}</li>
+				<li>Null - Valor indefinido</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h3>Programación en JavaScript</h3>
+			<ul>
+				<li>Condiciones: if/else</li>
+				<li>Estructuras: Switch</li>
+				<li>Cielos/Bucles: For, while, do-while</li>
+				<li>for... of - para recorrer colecciones (arrays)</li>
+				<li>for... in - para recorrer object/disc (clave)</li>
+			</ul>
+		</section>
+		
+		<section>
+			<h3>Momento - Lugar cuando se ejecuta JavaScript</h3>
+			<ol>
+				<li>Script dentro del HTML - Script embebido en medio del HTML - (Inline Script Early)</li>
+				<li>Script dentro de un control - Uso de los atributos en elementos HTML - (Inline Events Handlers)</li>
+				<li>Script al final (Antes de cerrar Body) - Script embebido al final antes de cerrar el body - (Inline Script Late)</li>
+				<li>Archivo externo (.js) - Script externo vinculado al html - (External Script)</li>
+					
+			</ol>
+		</section>
+		
+		<section>
+			<h3>Prueba de ejecución de cada momento</h3>
+			<ol>
+				<li>Script dentro del HTML - (Inline Script Early)</li>
+					<script>
+						document.write("Este es mi primer mensaje generado con Document.write - Dentro del body");
+					</script>
+				<li>Script dentro de un control - (Inline Events Handlers)</li>
+					<!-- Debemos concer los eventoos (acciones que hace el usuario)-->
+					<button onclick="alert('Script ejecutado dentro de un control (boton)')"> Presioname 1 </button>
+				<li>Script al final (Antes de cerrar Body) - (Inline Script Late)</li>
+					<button id="BtnPresioname2" onclick="mostrarAlert()"> Presioname 2 </button>
+				<li>Archivo externo (.js) - (External Script)</li>
+					<!-- Se recomienda no uusar llamadas a función, en su lugar trabajar con los id-->
+					<button id="BtnPresioname3"> Presioname 3 </button>
+					<!-- Hackear al usuario -->
+					<!-- Modificar contrles por medio de eventos -->
+					<h5>Modificar el contenido de HTML desde JavaScript</h5>
+					<p id="Parrafo_1">
+						Este párrafo fue escrito en HTML, las fuentes no deberían ser Modificado desde el Script
+						desde el Script.
+					</p>
+					<!-- Modificar contenido captión de un botón -->
+					<button id="BtnPresioname4"> Presioname 4 </button>
+			</ol>
+		</section>
+		
+		<section>
+			<h3> Métodos relacionados</h3>
+			<h5> Eventos JavaScript para páginas web</h5>
+			<!-- Recuerda: CSS selectores -->
+			<ol>
+				<li>getElementById
+					<p> Afectamos a un único Elemento por su Id.
+						document.getElementById("IdDelControl");
+						
+					</p>
+					<h1 id="Titulo" > Titulo Original </h1>
+				</li>
+				<li>getElementByClassName()
+					<p>
+						Todos los elementos que tenga la misma clase: getElementByClassName()
+					</p>
+					<p class="item"> Este es el parrafo #1 con a clase: "item"</p>
+					<p class="item"> Este es el parrafo #2 con a clase: "item"</p>
+					<p class="item"> Este es el parrafo #3 con a clase: "item"</p>
+					<p class="item"> Este es el parrafo #4 con a clase: "item"</p>
+				</li>
+				<li>getElementByTagName()
+					<p>
+						Todos los elementos que tengan la misma etiqueta: getElementByTagName(p);
+					</p>
+				</li>
+				<li>querySelector()
+					<p>
+						El primer elemento que coincida con un selector CSS, document.querySelector()
+					</p>
+					<p>
+						Veamos la ejecución paso a paso
+					</p>
+					
+				</li>
+				<li>querySelectorAll()
+					<p>
+						Todos los elementoos HTML quee coincida con un selector seleccionado 
+						document.querySelectorAll()
+					</p>
+					<div> Primero </div>
+					<div> Segundo </div>
+					<div> Tercero </div>
+					<div> Cuarto </div>
+					
+				</li>
+					
+			</ol>
+		</section>
+		
+		<section>
+			<h3>Eventos programables JavaScript dentro de una página Web</h3>
+			<ol>
+				<li>DOMContentLoaded
+					<p>
+					Definición: Se dispara cuando el árbol del DOM ha sido completamente cargado y analizado, 
+					pero antes de que los recursos externos como imágenes y hojas de estilo hayan finalizado su carga.
+					</p>
+				</li>
+				<li>load
+					<p>
+					Definición: Se dispara en el objeto window cuando la página y todos sus recursos dependientes 
+					(imágenes, estilos, scripts externos, etc.) han terminado de cargarse por completo.
+					</p>
+				</li>
+				<li>unload
+					<p>
+					Definición: Se dispara cuando el usuario abandona la página o cierra el navegador.
+					Solo permite realizar operaciones muy sencillas que no involucren demoras o peticiones al usuario.
+					</p>
+				</li>
+				<li>beforeunload
+					<p>
+					Definición: Se dispara justo antes de que la página comience a descargarse. 
+					Permite mostrar una advertencia al usuario para evitar la pérdida de datos 
+					sin guardar antes de que abandone la página.
+					</p>
+				</li>
+				<li>visibilitychange
+					<p>
+					Definición: Se dispara en el documento cuando el contenido de la pestaña pasa de estar visible a oculto 
+					(y viceversa), por ejemplo, cuando el usuario cambia de pestaña o minimiza la ventana.
+					</p>
+				</li>
+				<li>readystatechange
+					<p>
+					Definición: Se dispara en el objeto document cada vez que la propiedad readyState 
+					(el estado de carga del documento) cambia a loading, interactive o complete.
+					</p>
+				</li>
+				<li>fullscreenchange y fullscreenerror
+					<p>
+					Definición: **fullscreenchange** se dispara inmediatamente después de que un elemento entra o sale del
+					modo de pantalla completa.<br> **fullscreenerror** se dispara cuando ocurre un error al intentar activar
+					el modo de pantalla completa.
+					</p>
+				</li>
+				<li>copy, cut, paste
+					<p>
+					Definición: Eventos del portapapeles que se disparan cuando el usuario realiza las acciones de copiar, 
+					cortar o pegar contenido. Permiten interceptar y modificar el texto transferido.
+					</p>
+				</li>
+				<li>selectionchange
+					<p>
+					Definición: Se dispara cuando la selección de texto dentro de un documento o en un elemento que permite
+					edición ha cambiado (se ha modificado el rango seleccionado).
+					</p>
+				</li>
+				<li>scroll
+					<p>
+					Definición: Se dispara cuando el contenido de un elemento (o el documento completo)
+					ha sido desplazado (scroll) por el usuario o mediante un script.
+					</p>
+				</li>
+			</ol>
+		</section>
+		
+		<script src="../js/script.js"></script>
+	</main>
+	
+		
+	<footer>
+		
+		<p> Desarrollado por g30odl</p>
+		<a href="geodloo@espol.edu.ec" > Correo </a> |
+		<a href="tel:+593 9999999999" > Telefono Celular</a>
+		<p> © 2025 - Página de prácticas académicas | ESPOL</p>
+		
+	</footer>
+		
+	<script>
+
+		document.write("Este es el segundo mensaje generado con Document.write - Después del body");
+		
+		function mostrarAlert(){
+			alert("Este mensaje se muestra al presinar el botón 'Presioname 2' - Dentro Script interno");
+		}
+	
+	</script>
+	
+</body>
+</html>
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+	<!-- METADATOS -->
+	<meta charset="UTF-8"> <!-- Comentario -->
+	<meta name = "description" content="practicas-- html,css,js">
+	<meta name ="keywords" content ="HTML, CSS, JavaScript">
+	<meta name = "author" content = "Geovanny" >
+	<meta name ="viewport" content = "width=device-width, initial-scale=1.0">
+	<meta http-equiv = "refresh" content= "10"> <!-- Refrescar página cada 10 segundos -->
+	<!-- METADATOS -->
+	
+	<!-- El error base de toda página web es la ruta -->
+	<title> Prácticas CSS </title>
+	<link rel="stylesheet" href= "../css/styles.css"  >
+	<link rel="icon" href="../img/Pokemon/Blastoise.ico" type="Mándala" size="16x16" >
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap" rel="stylesheet">
+
+</head>
+<body class="diseño">
+	<header>
+		<nav>	
+		  <a href = "../../index.html"> Inicio </a>  |
+		  <a href = "../page/practica_Text.html"> Práctica de Texto </a>  |
+		  <a href = https://sites.google.com/fiec.espol.edu.ec/islands/inicio?authuser=2> Práctica Builder (Google Site)</a> | 
+		  <a href = https://technologyec.my.canva.site/computer> Práctica Canva (Link a Canva)</a>  |
+		  <a href = "../page/cafeteria-artesanal/index.html"> Práctica de Inteligencia Artificial </a>  |
+		  <a href = "../page/practica_List.html"> Práctica de Listas</a>  |
+		  <a href = "../page/practica_Imagen.html"> Práctica de Imágenes</a>  |
+		  <a href = "../page/practica_Audio.html"> Práctica de Audio</a>  |
+		  <a href = "../page/practica_Video.html"> Práctica de Video</a>  |
+		  <a href = "../page/practica_Tablas.html"> Práctica de Tablas</a>  |
+		  <a href = "../page/practica_CSS.html"> Práctica de CSS</a>  |
+		  <a href = "../../CopyPaste/index.html"> Práctica de Copy Paste (Plantilla)</a>  |
+		  <a href = "../page/practica_JavaScript.html"> Práctica de JavaScript</a>  |
+		  <a href = "../page/practica_controles.html"> Práctica de Controles</a>  |
+		  <a href = "../page/practica_Formulario.html"> Práctica de Formularios</a>  |
+		  <a href = "../page/practica_Formulario2.html"> Práctica de Formularios-2 </a>  |
+		  <a href = "../page/practica_Menu_Horizontal.html"> Práctica de etiquetas de Menú Horizontal </a>  |
+		  <a href = "../page/practica_Menu_Vertical.html"> Práctica de etiquetas de Menú Vertical </a>  |
+		  <a href = "../page/practica_crazy.html"> Práctica de Crazy </a>  
+		</nav>
+	</header>
+	<h2 class="bbh-sans-hegarty-regular"> Esta hoja fue hecha con CSS </h2>
+	<hr>
+	<p> texto decorado con CSS </p>
+	
+	<main>
+		<h1 class="bbh-sans-hegarty-regular"> Practica de CSS </h1>
+		<span>
+				CSS nos ayuda para dar estilo y diseño a nuestra Página web.
+				
+			</span>
+			
+		<div class="comportamiento">
+			<p class="caja">1.- En linea - Código embebido<br>
+					Linea de estilo con código embebido<br>
+			</p>
+
+			<p class="caja">			
+				2.- Código Interno - Código en la cabezara<br>
+				El codigo debe ir en la cabecera del file<br>
+				
+				style <br>
+					pl <br>
+						background:blue;
+						<br>
+						}<br>
+				style <br></p>
+			<p class="caja">	
+				3.- Externo - File.css<br>
+				link rel="stylesheet" href="estilo.css"
+			</p>
+			
+			
+		</div>	
+		<section class="Resalta">
+			<article>
+				<p> 1.- Cuidado con las etiquetas dentro de otras etiquetas porque al cerrar, puede interprase como que cierras la principal</p>
+				<p>	2.- Si hay dos diseños se aplicará el último</p>		
+				<p>3.- Valide resetear antes de aplicar su diseño</p>
+			</article>
+		</section>
+		
+		<div class="comportamiento">
+			<p class="caja">
+				Model caja 1<br>
+				Todo element de html se debe tratar como una caja
+			</p>
+			
+			<p class="caja">
+				Model caja 2<br>
+				Todo element de html se debe tratar como una caja
+			</p>
+		</div>
+				
+		
+		<span>
+			<h3 class="bbh-sans-hegarty-regular" > Hipervinculos </h3>
+			<hr>
+			<h5 class="bbh-sans-hegarty-regular" > Hipervinculos: Abrir nueva pestaña </h5>
+			<hr>
+			<p>Un enlace target blank es, como su propio nombre indica, una palabra, frase o imagen que, al ser clicada, lleva a otra web o lugar. No obstante, el aditivo de target blank implica una propiedad bastante peculiar, y es que esta redirección se realiza a través de una pestaña completamente nueva de tu navegador. </p>
+			<a href="../page/practica_Audio.html" target="_blank"> abrir nueva pestaña</a><hr>
+			<h5 class="bbh-sans-hegarty-regular" > Hipervinculos: Abrir en la misma pestaña </h5>
+				
+			<hr>
+			<p> Se utiliza self</p>
+				<a href="../page/practica_Audio.html" target="_self"> abrir nueva pestaña</a><hr>
+			<h5 class="bbh-sans-hegarty-regular" > Hipervinculos: Seguro </h5>
+			<hr>
+			<p>Noopener está relacionado con la seguridad. Soluciona un problema de seguridad en los navegadores conocido como "reverse tab nabbing", que permite a un atacante tener acceso parcial a la página anterior y se usa normalmente cuando un enlace está configurado para abrirse en una nueva pestaña con target="_blank".
+				Noreferrer está relacionado con análisis y seguimiento. El valor de referencia muestra la página anterior de donde vino un usuario. Al utilizar el atributo noreferrer en un enlace, estás impidiendo que otras páginas vean que el tráfico procedía de un clic en tu enlace.
+Ejemplo:	</p>
+			<a href="../page/practica_Audio.html" target="_blank" rel="noopener Noreferrer"> abrir nueva pestaña</a>
+		</span>
+		
+		<h2> Botones con estilo</h2>
+		<h6> Evento over</h6>
+		
+		<button> Presioname 1 </button>
+		<button class="boton"> Presioname 2 </button>
+		</span>
+		
+		
+	</main>
+		
+	<footer>
+		
+		<p> Desarrollado por g30odl</p>
+		<a href="geodloo@espol.edu.ec" > Correo </a> |
+		<a href="tel:+593 9999999999" > Telefono Celular</a>
+		<p> © 2025 - Página de prácticas académicas | ESPOL</p>
+		
+	</footer>
+</body>
