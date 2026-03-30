@@ -1,85 +1,108 @@
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
 
-/*   ---------------------------------------------   */
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-let Lv_Mensaje = "Este es mi Cuarto mensaje Alert - Externo - Antes del body"
-alert(Lv_Mensaje);
+// Hamburger menu
+const nav = document.querySelector('nav');
+const hamburger = document.querySelector('.hamburger');
 
-/*   ---------------------------------------------   */
-function mostrarAlert(){
-	let Lv_Mensaje2 = "Este mensaje se muestra al presinar el botón 'Presioname 2' - Dentro Script interno";
-	alert(Lv_Mensaje2);
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
 }
 
-window.addEventListener("DOMContentLoaded",function(){
-	/*  
-		Se usa constante para que ell vallor del id no sea modificado
-		document hace referencia al HTML 
-		getElementyById obtiene un valor por su ID 
-	*/
-	const Btn3 = document.getElementById("BtnPresioname3");
-	Btn3.addEventListener("click", function(){
-		let Lv_Mensaje_3 = "Este mensaje se muestra al presinar el botón 'Presioname 3' - Dentro Script interno ejecutado por medio de Id";
-		alert(Lv_Mensaje_3);
-	});
-	
-	/*  
-		Modificar Párrafo uno de HTML
-	*/
-	let Parrafo="Este párrafo fue MODIFICADO en JavaScript (Externo), no se modificaron las fuentes.";
-	const prrf_1 = document.getElementById("Parrafo_1");
-	if (prrf_1){
-		prrf_1.textContent=Parrafo;
-	}
-	/*  
-		Aqui se hackeo un controll Button en HTM y generó un Alert al usuario
-	*/
-	const Btn4 = document.getElementById("BtnPresioname4");
-	let Lv_Caption = "Tú fuiste hackeado";
-	let Lv_Mensaje_4 = "Este Botón no tiene evento click - Script Externo";
-	if(Btn4){
-		Btn4.addEventListener("click", function(){
-			Btn4.textContent= Lv_Caption;
-			alert(Lv_Mensaje_4);
-		});
-	}
-	
-	/*  
-		1. Métodos de JavaScript relacionado con una página HTML
-		por puro ID: getElementById
-	*/
-	const Lv_Titulo= document.getElementById("Titulo");
-	Lv_Titulo.textContent="Este valor cambió por medio del document.getElementById()";
-	Lv_Titulo.style.color="red";
-	/*  
-		2. Solo por CLASS: getElementsByClassName
-	*/
-	const items = document.getElementsByClassName("item");
-	for (let i=0; i<items.length; i++){
-		items[i].textContent="Método #2: Este parrafo " +(i + 1)+ " con la clase 'item' fue modificado por el elemento: getElementsbyClassName.";
-		items[i].style.fontWeight = "bold";
-	};
-/*  
-		3. Solo por etiquetas: getElementsByTagName()
-	*/
-	const Ln_parrafo = document.getElementsByTagName("p");
-	for (let i=0; i<Ln_parrafo.length; i++){
-		Ln_parrafo[i].style.border = "3px solid black";
-	};
-	/*  
-		4. querySelector()
-	*/
-	const ln_selector = document.querySelector("p");
-	ln_selector.style.background = "green";
+// Dynamic footer year
+const footerYear = document.getElementById('footer-year');
+if (footerYear) {
+    footerYear.textContent = `\u00a9 ${new Date().getFullYear()} - P\u00e1gina Curriculum Vitae Geovanny Diaz | ESPOL`;
+}
 
-/*  
-		5. querySelectorAll()
-	*/
-	const ln_elementos = document.querySelectorAll("div");
-	for (let i=0; i<ln_elementos.length; i++){
-		ln_elementos[i].style.background = "yellow";
-	};
-	
+// Contact form validation
+const form = document.getElementById('contact-form');
 
+if (form) {
+    const fields = {
+        nombre:  { el: document.getElementById('nombre'),  error: document.getElementById('nombre-error')  },
+        email:   { el: document.getElementById('email'),   error: document.getElementById('email-error')   },
+        asunto:  { el: document.getElementById('asunto'),  error: document.getElementById('asunto-error')  },
+        mensaje: { el: document.getElementById('mensaje'), error: document.getElementById('mensaje-error') },
+    };
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-});
+    function showError(field, msg) {
+        field.el.classList.add('field-error');
+        field.error.textContent = msg;
+    }
+
+    function clearError(field) {
+        field.el.classList.remove('field-error');
+        field.error.textContent = '';
+    }
+
+    function validateForm() {
+        let valid = true;
+
+        if (!fields.nombre.el.value.trim()) {
+            showError(fields.nombre, 'El nombre es obligatorio.');
+            valid = false;
+        } else {
+            clearError(fields.nombre);
+        }
+
+        if (!emailRegex.test(fields.email.el.value.trim())) {
+            showError(fields.email, 'Ingres\u00e1 un correo electr\u00f3nico v\u00e1lido.');
+            valid = false;
+        } else {
+            clearError(fields.email);
+        }
+
+        if (!fields.asunto.el.value.trim()) {
+            showError(fields.asunto, 'El asunto es obligatorio.');
+            valid = false;
+        } else {
+            clearError(fields.asunto);
+        }
+
+        if (fields.mensaje.el.value.trim().length < 10) {
+            showError(fields.mensaje, 'El mensaje debe tener al menos 10 caracteres.');
+            valid = false;
+        } else {
+            clearError(fields.mensaje);
+        }
+
+        return valid;
+    }
+
+    Object.values(fields).forEach(field => {
+        field.el.addEventListener('input', () => clearError(field));
+    });
+
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', (e) => {
+        if (!validateForm()) {
+            e.preventDefault();
+            return;
+        }
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+    });
+}
